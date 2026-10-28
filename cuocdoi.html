@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuộc đời và bối cảnh của Steve Jobs</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #fff;
+            background: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 25px 0 12px 0;
+            color: var(--accent-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Card Container */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 24px rgba(56, 189, 248, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Khối chứa chữ và hình ảnh */
+        .content-with-img {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .content-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* Khối chứa ảnh và chú thích ảnh */
+        .img-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        /* Hiệu ứng ảnh phát sáng khi rê chuột vào */
+        .interactive-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .interactive-img:hover {
+            transform: scale(1.05);
+            border-color: #ffffff;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.8), 0 0 60px rgba(56, 189, 248, 0.4);
+        }
+
+        /* Style cho chú thích ảnh bên dưới */
+        .img-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-style: italic;
+            max-width: 220px;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                margin-top: 10px;
+                gap: 8px;
+            }
+            .content-with-img {
+                flex-direction: column;
+            }
+            .img-box {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Steve Jobs</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="cuocdoi.html" class="active">Cuộc đời</a></li>
+                <li><a href="hanhtrinh.html">Hành trình</a></li>
+                <li><a href="thanhtuu.html">Thành tựu</a></li>
+                <li><a href="thuthach.html">Thử thách</a></li>
+                <li><a href="tacdong.html">Tác động</a></li>
+                <li><a href="disan_baihoc.html">Di sản & Bài học</a></li>
+                <li><a href="thuvien_nguon.html">Thư viện & Nguồn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cuộc đời và bối cảnh của Steve Jobs</h1>
+
+        <div class="card">
+            <h2>1. Ngày tháng năm sinh và Quê quán</h2>
+            <ul>
+                <li><strong>Ngày sinh:</strong> 24 tháng 2 năm 1955.</li>
+                <li><strong>Nơi sinh:</strong> San Francisco, bang California, Hoa Kỳ.</li>
+            </ul>
+        </div>
+
+        <!-- MỤC 2: BỔ SUNG ẢNH h3.jpg + CHÚ THÍCH -->
+        <div class="card">
+            <h2>2. Gia đình và tuổi thơ</h2>
+            <div class="content-with-img">
+                <div class="content-text">
+                    <ul>
+                        <li><strong>Cha mẹ ruột:</strong> Joanne Carole Schieble và Abdulfattah "John" Jandali (hai sinh viên Đại học Wisconsin). Do hoàn cảnh chưa sẵn sàng, họ đã gửi ông cho một gia đình nhận nuôi ngay sau khi sinh.</li>
+                        <li><strong>Cha mẹ nuôi:</strong> Paul Reinhold Jobs (thợ cơ khí và thợ mộc) và Clara Jobs (kế toán) – một gia đình lao động bình thường tại California.</li>
+                        <li><strong>Tuổi thơ:</strong> Lớn lên trong một gia đình thương yêu nhưng thuộc tầng lớp lao động. Từ nhỏ, ông đã được cha nuôi là ông Paul hướng dẫn cách tháo lắp, sửa chữa các thiết bị điện tử, radio trong gara. Chính tại đây, niềm đam mê máy móc và sự tỉ mỉ trong từng chi tiết nhỏ đã hình thành.</li>
+                    </ul>
+                </div>
+                <div class="img-box">
+                    <img src="images/h3.jpg" alt="Ngôi nhà và gara tuổi thơ của Steve Jobs tại Los Altos" class="interactive-img">
+                    <span class="img-caption">Căn nhà cùng chiếc gara huyền thoại nơi Steve Jobs lớn lên và khởi nghiệp.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC 3: ẢNH h1.jpg -->
+        <div class="card">
+            <h2>3. Quá trình học tập</h2>
+            <div class="content-with-img">
+                <div class="content-text">
+                    <ul>
+                        <li><strong>Bậc phổ thông:</strong> Theo học tại trường Tiểu học Monta Loma, Trung học cơ sở Cupertino và trường Trung học Homestead ở California. Trong thời gian này, ông tham gia câu lạc bộ điện tử và làm thêm vào mùa hè tại hãng Hewlett-Packard (HP).</li>
+                        <li><strong>Bậc đại học:</strong> Năm 1972, ông nhập học tại Reed College (Portland, Oregon). Tuy nhiên, ông chỉ học chính thức được một học kỳ rồi quyết định bỏ học. Dù vậy, ông vẫn ở lại trường để ngủ nhờ trên sàn nhà bạn bè và tự do dự thính các môn học mình thích (như lớp nghệ thuật thư pháp – thứ sau này giúp các máy tính Macintosh có kiểu chữ tinh xảo).</li>
+                    </ul>
+                </div>
+                <div class="img-box">
+                    <img src="images/h1.jpg" alt="Steve Jobs thời trẻ" class="interactive-img">
+                    <span class="img-caption">Steve Jobs thời niên thiếu và sinh viên tại Reed College.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MỤC 4: ẢNH h2.jpg -->
+        <div class="card">
+            <h2>4. Những yếu tố ảnh hưởng đến nhân vật</h2>
+            <div class="content-with-img">
+                <div class="content-text">
+                    <ul>
+                        <li><strong>Người cha nuôi Paul Jobs:</strong> Truyền cho ông triết lý: <em>“Dù làm bất cứ việc gì, từ mặt trước hay mặt khuất phía sau, cũng phải làm thật hoàn hảo đến từng chi tiết”</em>.</li>
+                        <li><strong>Sự gặp gỡ Steve Wozniak:</strong> Khi lên trung học, ông gặp gỡ Wozniak – một thiên tài kỹ thuật lớn hơn ông 5 tuổi, có cùng chí hướng dân chủ hóa công nghệ máy tính.</li>
+                        <li><strong>Môi trường Silicon Valley:</strong> Lớn lên đúng lúc Thung lũng Silicon bắt đầu bùng nổ các xưởng chế tạo bán dẫn và thiết bị điện tử.</li>
+                    </ul>
+                </div>
+                <div class="img-box">
+                    <img src="images/h2.jpg" alt="Steve Jobs và Steve Wozniak trong gara" class="interactive-img">
+                    <span class="img-caption">Steve Jobs và Steve Wozniak đang miệt mài chế tạo máy tính trong gara gia đình (1975).</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Bối cảnh lịch sử, xã hội hoặc khoa học trong thời kỳ nhân vật sống</h2>
+            <ul>
+                <li><strong>Kỷ nguyên sơ khai của máy tính:</strong> Khi Steve Jobs lớn lên, máy tính là những cỗ máy khổng lồ, cồng kềnh chỉ có trong các cơ quan chính phủ hoặc tập đoàn lớn.</li>
+                <li><strong>Phong trào phản văn hóa thập niên 1960–1970:</strong> Nước Mỹ thời kỳ này tràn ngập tinh thần nổi loạn, tư duy "nghĩ khác biệt" (Think Different), phong trào hippie và sự dịch chuyển sang công nghệ cá nhân hóa. Khoa học kỹ thuật điện tử bước vào giai đoạn thu nhỏ mạch tích hợp, tạo tiền đề cho sự ra đời của máy tính để bàn.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>6. Những khó khăn hoặc điều kiện đặc biệt trong giai đoạn đầu cuộc đời</h2>
+            <ul>
+                <li><strong>Cảm giác bị bỏ rơi:</strong> Việc sinh ra là con nuôi từng để lại trong tâm thức Jobs nỗi trăn trở về việc bị từ chối từ ngày đầu chào đời.</li>
+                <li><strong>Hoàn cảnh kinh tế không dư dả:</strong> Gia đình nuôi ở tầng lớp lao động bình thường, không có nền tảng tài chính lớn mạnh để hỗ trợ ông vào những trường đại học danh tiếng đắt đỏ hay khởi nghiệp dễ dàng.</li>
+                <li><strong>Sự bứt phá từ hoàn cảnh:</strong> Chính sự kết hợp giữa xuất thân lao động khiêm tốn, tư duy tự học ngoài hệ thống giáo dục chuẩn mực và sự tiếp xúc sớm với kỹ thuật ở gara đã tôi luyện nên một Steve Jobs kiêu ngạo, gai góc nhưng có tầm nhìn cách mạng.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

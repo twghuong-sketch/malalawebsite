@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Steve Jobs - Người kiến tạo tương lai</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>STEVE JOBS</h1>
+        <p>Người kiến tạo tương lai công nghệ</p>
+    </header>
+
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#cuocdoi">Cuộc đời</a>
+        <a href="#thanhtuu">Thành tựu</a>
+        <a href="#baihoc">Bài học</a>
+    </nav>
+
+    <main>
+        <section id="gioithieu">
+            <h2>Steve Jobs là ai?</h2>
+            <p>
+                Steve Jobs là doanh nhân và nhà sáng tạo
+                nổi tiếng, đồng sáng lập Apple.
+                Ông có ảnh hưởng lớn đến ngành công nghệ.
+            </p>
+
+            <!-- Bạn tự thêm hình ảnh Steve Jobs ở đây -->
+        </section>
+
+        <section id="cuocdoi">
+            <h2>Hành trình cuộc đời</h2>
+            <p>
+                Tìm hiểu những dấu mốc quan trọng
+                trong cuộc đời và sự nghiệp của ông.
+            </p>
+        </section>
+
+        <section id="thanhtuu">
+            <h2>Thành tựu nổi bật</h2>
+            <ul>
+                <li>Đồng sáng lập Apple.</li>
+                <li>Góp phần phát triển máy Macintosh.</li>
+                <li>Góp phần tạo nên những sản phẩm
+                    có ảnh hưởng như iPhone và iPad.</li>
+            </ul>
+        </section>
+
+        <section id="baihoc">
+            <h2>Bài học truyền cảm hứng</h2>
+            <p>
+                Sáng tạo, kiên trì và không ngừng học hỏi
+                là những bài học đáng suy ngẫm.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lớp 12A9 - Máy 25</p>
+        <p>Thực hiện: Mai Thị Quỳnh Hương
+           và Nguyễn Ngọc Hân</p>
+    </footer>
+
+</body>
+</html>
+/* Bố cục chứa ảnh và chữ cho trang chủ */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Kiểu dáng khung ảnh chân dung tròn đẹp */
+.hero-avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover {
+    transform: scale(1.05); /* Hiệu ứng nổi nhẹ khi di chuột */
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Tự động căn chỉnh dọc khi xem trên điện thoại */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
